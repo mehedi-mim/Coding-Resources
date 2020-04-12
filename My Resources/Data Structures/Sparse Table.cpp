@@ -12,7 +12,7 @@ for (int j = 1; j <= k; j++)
     for (int i = 1; i + (1 << j)-1 <= n; i++)
         sp[i][j] = f(sp[i][j-1], sp[i + (1 << (j - 1))][j - 1]);
 
-//j = 3 means j = (2^3) = 4; [1 to 4] then [5 to Eight] = 2^3
+//sp[i][j] j = 3 means j-1 = (2^2) = 4; [1 to 4] then [5 to 8] = 2^3
 
 
 
