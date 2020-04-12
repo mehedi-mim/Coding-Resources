@@ -1,5 +1,5 @@
 
-// K = log(n)
+// k = log(n)
 // mxn = sizeof of array
 
 int sp[mxn][k + 1]; // Declare sparse table
