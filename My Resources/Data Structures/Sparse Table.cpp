@@ -1,5 +1,5 @@
 
-// k = log(n)
+// K = log(n)
 // mxn = sizeof of array
 
 int sp[mxn][k + 1]; // Declare sparse table
@@ -7,7 +7,7 @@ int sp[mxn][k + 1]; // Declare sparse table
 for (int i = 1; i <= n; i++)
     sp[i][0] = array[i];    // initialize
 
-    //Building table
+//Building table
 for (int j = 1; j <= k; j++)
     for (int i = 1; i + (1 << j)-1 <= n; i++)
         sp[i][j] = f(sp[i][j-1], sp[i + (1 << (j - 1))][j - 1]);
@@ -21,8 +21,10 @@ for (int j = 1; j <= k; j++)
 
 // This is for query of sum............
 long long sum = 0;
-for (int j = k; j >= 0; j--) {
-    if ((1 << j) <= R - L + 1) {       // query = [L,R]
+for (int j = k; j >= 0; j--)
+{
+    if ((1 << j) <= R - L + 1)         // query = [L,R]
+    {
         sum += sp[L][j];
         L += 1 << j;
     }
