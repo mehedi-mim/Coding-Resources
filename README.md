@@ -17,3 +17,12 @@ find(nums.begin(), nums.end(), curr_num + 1) != nums.end())
 ```
 unordered_set<int> num_set(nums.begin(), nums.end());
 ```
+#### Find in Set
+```
+num_set.find(num) != num_set.end()
+```
+
+#### Not found in Set
+```
+num_set.find(num) == num_set.end()
+```
